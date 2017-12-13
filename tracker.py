@@ -14,9 +14,12 @@ def getData():
       btc = result
     elif result['MarketName'] == "BTC-ETH":
       eth = result
+    elif result['MarketName'] == "USDT-XRP":
+      xrp = result
   print (ltc['MarketName'], "last:", ltc['Last'])
   print (btc['MarketName'], "last:", btc['Last'])
   print (eth['MarketName'], "last:", eth['Last'])
+  print (xrp['MarketName'], "last:", xrp['Last'])
   print ('\n')
 while True:
   getData()
