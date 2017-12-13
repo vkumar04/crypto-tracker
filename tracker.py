@@ -8,15 +8,16 @@ results = response_dict['result']
 
 def getData():
   for result in results:
-    if result['MarketName'] == "USDT-LTC":
+    if result['MarketName'] == "BTC-LTC":
       ltc = result
     elif result['MarketName'] == "USDT-BTC":
       btc = result
-    elif result['MarketName'] == "USDT-ETH":
+    elif result['MarketName'] == "BTC-ETH":
       eth = result
-  print (ltc['MarketName'], ltc['Last'])
-  print (btc['MarketName'], btc['Last'])
-  print (eth['MarketName'], eth['Last'])
+  print (ltc['MarketName'], "last:", ltc['Last'])
+  print (btc['MarketName'], "last:", btc['Last'])
+  print (eth['MarketName'], "last:", eth['Last'])
+  print ('\n')
 while True:
   getData()
   time.sleep(30)
